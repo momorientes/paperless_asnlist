@@ -40,7 +40,7 @@ def api_get(endpoint):
     except KeyError as e:
         raise ValueError(f"Missing required configuration key: {e}")
 
-    headers = { "Authorization": f"Token {api_key}", "Accept": "application/json; version=5" }
+    headers = { "Authorization": f"Token {api_key}", "Accept": "application/json; version=6" }
 
     response = requests.get(url + endpoint, headers=headers)
     response.raise_for_status()
